@@ -44,8 +44,8 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             cursorPos.x = playerPos.x + 2 * gridSize * Mathf.Cos(theta) ;
             cursorPos.y = playerPos.y + 2 * gridSize * Mathf.Sin(theta) ;
         }
-        cursorPos.x = Mathf.Floor(cursorPos.x / gridSize) * (gridSize) + 0.5f * gridSize;
-        cursorPos.y = Mathf.Floor(cursorPos.y / gridSize) * (gridSize) + 0.5f * gridSize;
+        cursorPos.x = Mathf.Floor(cursorPos.x / gridSize) * (gridSize);
+        cursorPos.y = Mathf.Floor(cursorPos.y / gridSize) * (gridSize);
         cursorPos.z = playerPos.z;
         transform.position = cursorPos;
 
