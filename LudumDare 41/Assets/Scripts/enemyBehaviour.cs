@@ -34,7 +34,7 @@ public class enemyBehaviour : MonoBehaviour {
         else
         {
             // attack
-            Debug.Log("ATTACK!");
+            //Debug.Log("ATTACK!");
         }
         
 
