@@ -8,6 +8,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     public float gridSize = 1;
     public GameObject towerType;
     public float spawnTime;
+    public GameObject player;
 
 
 	// Use this for initialization
@@ -27,7 +28,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         pos.z = 45;
         transform.position = pos;
 
-        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 1f)
+        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f)
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
             Debug.Log("mouse clicked: meant to place tower");
