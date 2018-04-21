@@ -24,4 +24,10 @@ public class Fish_Behaviour : MonoBehaviour {
 		// Destroy the enemy
 		Destroy(gameObject);
 	} 
+
+	void OnTriggerEnter2D(Collider2D hook){
+		if (hook.gameObject.name == "Hook") {
+			Destroy (gameObject);
+		}
+	}
 }
