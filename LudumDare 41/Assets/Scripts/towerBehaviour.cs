@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class towerBehaviour : MonoBehaviour
 {
+    public Renderer rend;
+    private bool isShaderOn = false;
+
     public float range = 20;
     public float damage;
     public float rateOfFire;
@@ -18,9 +21,30 @@ public class towerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
-    }
+        rend = GetComponent<Renderer>();        
 
+    }
+    public void changeShaderState(float onAlpha,float offAlpha)
+    {
+        isShaderOn = !isShaderOn;
+        if (isShaderOn)
+        {
+            rend.material.SetFloat("_Alpha", onAlpha);
+            rend.material.SetColor("_OutlineColour", Color.red);
+        }
+        else
+        {
+            rend.material.SetFloat("_Alpha", offAlpha);
+            rend.material.SetColor("_OutlineColour", Color.white);
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            changeShaderState(0, 0.3f);
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
