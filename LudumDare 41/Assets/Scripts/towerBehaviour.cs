@@ -11,33 +11,52 @@ public class towerBehaviour : MonoBehaviour
     public float bulletSpeed;
     public float rangeTime = 2f;
 
+    private GameObject[] targets;
     private GameObject target;
-    private float nextFire = 0.0f;
+    private float nextFire = 0f;
 
     // Use this for initialization
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 heading = (target.transform.position - this.transform.position);
-        var distance = heading.magnitude;
-        Vector2 lookDirection = heading / distance;
-
-        if (heading.sqrMagnitude < range * range)
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject tMin = null;
+        float minDist = Mathf.Infinity;
+        foreach (GameObject t in targets)
         {
-            if (Time.time > nextFire)
+            float dist = Vector2.Distance(t.transform.position, this.transform.position);
+            if (dist < minDist)
             {
-                nextFire = Time.time + rateOfFire;
-
-                GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
-                bullet.GetComponent<Rigidbody2D>().AddForce(lookDirection * bulletSpeed);
-
-                Destroy(bullet, rangeTime);
+                tMin = t;
+                minDist = dist;
             }
         }
+        target = tMin;
+
+        if (target != null)
+        {
+            Vector2 heading = (target.transform.position - this.transform.position);
+            var distance = heading.magnitude;
+            Vector2 lookDirection = heading / distance;
+
+            if (heading.sqrMagnitude < range * range)
+            {
+                if (Time.time > nextFire)
+                {
+                    nextFire = Time.time + rateOfFire;
+
+                    GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
+                    bullet.GetComponent<Rigidbody2D>().AddForce(lookDirection * bulletSpeed);
+
+                    Destroy(bullet, rangeTime);
+                }
+            }
+        }
+
     }
 }
