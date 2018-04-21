@@ -24,6 +24,7 @@ public class towerBehaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         targets = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject tMin = null;
         float minDist = Mathf.Infinity;
@@ -44,6 +45,9 @@ public class towerBehaviour : MonoBehaviour
             var distance = heading.magnitude;
             Vector2 lookDirection = heading / distance;
 
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
             if (heading.sqrMagnitude < range * range)
             {
                 if (Time.time > nextFire)
@@ -57,6 +61,5 @@ public class towerBehaviour : MonoBehaviour
                 }
             }
         }
-
     }
 }

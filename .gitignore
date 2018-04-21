@@ -87,3 +87,8 @@ LudumDare 41/Library/assetDatabase3
 *.mdb
 LudumDare 41/Library/metadata/d3/d30ca7964d6e44d418fdd5f761c240c6
 *.mdb
+*.xml
+*.info
+*.resource
+*.resource
+*.meta

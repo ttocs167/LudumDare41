@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class bulletBehaviour : MonoBehaviour {
     public GameObject bloodHit;
+    public int damage;
 
-    private Rigidbody2D rb;
     private GameObject bullet;
 
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody2D>();
         bullet = this.gameObject;
     }
 	
@@ -27,7 +26,7 @@ public class bulletBehaviour : MonoBehaviour {
 
             GameObject HitParticle = (GameObject)Instantiate(bloodHit, transform.position, transform.rotation);
 
-            collision.transform.gameObject.GetComponent<enemyBehaviour>().health -= 1;
+            collision.transform.gameObject.GetComponent<enemyBehaviour>().health -= damage;
 
             int healthCheck = collision.transform.gameObject.GetComponent<enemyBehaviour>().health;
 
