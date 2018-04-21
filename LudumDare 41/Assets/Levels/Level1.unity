@@ -113,62 +113,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &123588091
+--- !u!1001 &501709376
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: 8.3
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.17578125
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4672098981454360, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+    - target: {fileID: 4788068146459376, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1270720049919282, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
-      propertyPath: m_Name
-      value: Tower
-      objectReference: {fileID: 0}
-    - target: {fileID: 114476866633332358, guid: aecbf94ced3e5cf459cbe77b89690a8e,
-        type: 2}
-      propertyPath: rateOfFire
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114476866633332358, guid: aecbf94ced3e5cf459cbe77b89690a8e,
-        type: 2}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 002cdfbf3289f384bb17a08b996c94cb, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1 &230224951
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +184,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> origin/master
 --- !u!1001 &504463476
 Prefab:
   m_ObjectHideFlags: 0
@@ -300,7 +289,6 @@ GameObject:
   - component: {fileID: 1032555613}
   - component: {fileID: 1032555612}
   - component: {fileID: 1032555611}
-  - component: {fileID: 1032555615}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -371,6 +359,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1032555615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +375,8 @@ MonoBehaviour:
   height: 6
   spawnArea: {fileID: 230224951}
   enemyType: {fileID: 1657560054265660, guid: d6e91e70bf4ade740bf5d846eb52ca7e, type: 2}
+=======
+>>>>>>> origin/master
 --- !u!1001 &1068815559
 Prefab:
   m_ObjectHideFlags: 0
