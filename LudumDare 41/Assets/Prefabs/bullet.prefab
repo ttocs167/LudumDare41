@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodHit: {fileID: 1335969390400076, guid: 24c3d0a4d80acb34496f35f1525e370a, type: 2}
+  damage: 1
 --- !u!212 &212747087680384816
 SpriteRenderer:
   m_ObjectHideFlags: 1
